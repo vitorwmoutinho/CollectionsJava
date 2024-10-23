@@ -1,3 +1,5 @@
+package Operacoesbasicas.carrinhodecompras;
+
 public class Item {
     private String nome;
     private double preco;
