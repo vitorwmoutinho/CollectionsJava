@@ -1,4 +1,4 @@
-package Operacoesbasicas.carrinhodecompras;
+package list.Operacoesbasicas.list.carrinhodecompras;
 
 public class Item {
     private String nome;
