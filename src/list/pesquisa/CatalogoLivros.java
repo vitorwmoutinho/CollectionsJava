@@ -39,5 +39,17 @@ public class CatalogoLivros {
         return livroPorIntervalosAnos;
     }
 
+    public Livro pesquisarPorTitulo(String titulo){
+        Livro livroPorTitulos = null;
+        if(!LivroList.isEmpty()) {
+            for (Livro l : LivroList){
+                if(l.getTitulo().equalsIgnoreCase(titulo)){
+                    livroPorTitulos = l;
+                    break;
+                    }
+                }
+            }
+        return livroPorTitulos;
+    }
 
-
+}
