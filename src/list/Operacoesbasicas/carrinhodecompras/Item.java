@@ -1,16 +1,15 @@
-package Operacoesbasicas.carrinhodecompras;
-
 public class Item {
-    //attrib
     private String nome;
     private double preco;
     private int quantidade;
 
-    public Item(double preco, int quantidade) {
+
+    public Item(String nome, double preco, int quantidade) {
+        this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.nome = nome;
     }
+
 
     public String getNome() {
         return nome;
@@ -25,30 +24,20 @@ public class Item {
     }
 
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public double calcularValorTotal() {
+        return this.preco * this.quantidade;
+    }
 }

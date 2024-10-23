@@ -1,43 +1,19 @@
-package Operacoesbasicas.carrinhodecompras;
-
-import Operacoesbasicas.ListaTarefas.Tarefa;
-import Operacoesbasicas.carrinhodecompras.Item;
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    //atrib
-    private List<Item> listaCarrinho;
+    private List<Item> itens;
 
-    public CarrinhoDeCompras(){
-        this.listaCarrinho = new ArrayList<>();
-    }
-    public void adicionarItem(String descricao){
-        listaCarrinho.add(new Item(descricao));
-    }
-    public void removerItem(String descricao){
-        List<Item> itemParaRemover = new ArrayList<>();
-        for(Item t: listaCarrinho){
-            if(t.getdescricao().equalsIgnoreCase(descricao)){
-                itemParaRemover.add(t);
 
-            }
-        }
-        itemParaRemover.removeAll(itemParaRemover);
+    public CarrinhoDeCompras() {
+        this.itens = new ArrayList<>();
     }
-    public int calcularValorTotal(){
-        return listaCarrinho.size();
-    }
-    public void obterDescricaoIem() {
-        System.out.println(listaCarrinho);
+    public void adicionarItem(String nome, double preco, int quantidade){
+        Item item = new Item(nome, preco, quantidade);
+        itens.add(item);
+        System.out.println("item adicionado: "+ nome);
 
     }
-
-    public static void main(String[] args){
-        CarrinhoDeCompras carrinhodecompras = new CarrinhoDeCompras();
-        System.out.println("O numero de itens no carrinho: "+ )
-    }
-
 
 }
