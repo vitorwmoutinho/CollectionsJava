@@ -1,4 +1,4 @@
-package pesquisaset;
+package pesquisaset.agenda;
 
 import java.util.HashSet;
 import java.util.Set;
