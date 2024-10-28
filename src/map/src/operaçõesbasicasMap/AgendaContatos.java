@@ -24,7 +24,7 @@ public class AgendaContatos {
         System.out.println(agendaContatoMap);
     }
 
-    public Integer pesquisaPorNumero(String nome){
+    public Integer pesquisaPorNome(String nome){
         Integer numeroPorNome = null;
         if(!agendaContatoMap.isEmpty()){
            numeroPorNome = agendaContatoMap.get(nome);
@@ -32,5 +32,18 @@ public class AgendaContatos {
         }
         return numeroPorNome;
     }
-    
+
+
+    public static void main(String[] args) {
+        AgendaContatos agendaContatos = new AgendaContatos();
+
+        agendaContatos.adicionarContato("Camila", 123456);
+        agendaContatos.adicionarContato("Camila", 565656);
+        agendaContatos.adicionarContato("Camila Cavalcante", 111111);
+        agendaContatos.adicionarContato("Maria Silva", 111111);
+
+        agendaContatos.exibirContatos();
+
+        System.out.println("o numero é " + agendaContatos.pesquisaPorNome("Camila Cavalcante"));
+    }
 }
