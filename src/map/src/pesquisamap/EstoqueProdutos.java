@@ -31,6 +31,40 @@ public class EstoqueProdutos {
 
     public Produto obterProdutoMaisCaro(){
         Produto produtoMaisCaro = null;
-        
+        double maiorPreco = Double.MIN_VALUE;
+        if(!estoqueProduto.isEmpty()){
+            for(Produto p : estoqueProduto.values()){
+                if(p.getPreco() >= maiorPreco){
+                    produtoMaisCaro = p;
+                    }
+                }
+            }
+        return produtoMaisCaro;
     }
+    public Produto obterProdutoMaisBarato(){
+        Produto produtoMaisBarato = null;
+        double menorPreco = Double.MAX_VALUE;
+        if(!estoqueProduto.isEmpty()){
+            for(Produto p: estoqueProduto.values()){
+                if(p.getPreco() >= menorPreco){
+                    produtoMaisBarato = p;
+                }
+            }
+        }
+        return produtoMaisBarato;
+    }
+
+    public Produto obterProdutoMaiorQuantidadeValorTotalNoEstoque(){
+        Produto maiorQuantidadeValor = null;
+        double maiorValorTotal = 0;
+        for(Produto p: estoqueProduto.values()){
+            double valorTotal = p.getPreco() * p.getQuantidade();
+            if(maiorQuantidadeValor == null || valorTotal> maiorValorTotal){
+                maiorQuantidadeValor = p;
+                maiorValorTotal = valorTotal;
+            }
+        }
+        return maiorQuantidadeValor;
+    }
+
 }
