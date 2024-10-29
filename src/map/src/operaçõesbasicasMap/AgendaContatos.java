@@ -45,5 +45,9 @@ public class AgendaContatos {
         agendaContatos.exibirContatos();
 
         System.out.println("o numero é " + agendaContatos.pesquisaPorNome("Camila Cavalcante"));
+
+        agendaContatos.removerContato("Maria Silva");
+
+        agendaContatos.exibirContatos();
     }
 }
