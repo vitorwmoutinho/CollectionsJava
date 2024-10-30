@@ -32,7 +32,7 @@ public class EstoqueProdutos {
         for (Produto p : estoqueProduto.values()) {
             if (p.getPreco() > maiorPreco) {
                 produtoMaisCaro = p;
-                maiorPreco = p.getPreco(); 
+                maiorPreco = p.getPreco();
             }
         }
         return produtoMaisCaro;
