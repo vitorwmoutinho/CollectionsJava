@@ -9,8 +9,8 @@ public class ContagemPalavras {
     public ContagemPalavras() {
         this.contagemPalavras = new HashMap<>();
     }
-    public void adicionarPalavra(String palavra){
-        contagemPalavras.put(palavra);
+    public void adicionarPalavra(String palavra, int i){
+        contagemPalavras.put(palavra,1);
     }
     public void removerPalavra(String palavra){
         if(contagemPalavras.isEmpty()){
